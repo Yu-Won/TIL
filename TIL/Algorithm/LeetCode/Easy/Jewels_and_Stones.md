@@ -38,9 +38,7 @@ Letters are case sensitive, so `"a"` is considered a different type of stone fro
  * @param {string} stones
  * @return {number}
  */
-const numJewelsInStones = (jewels, stones) => {
-  let count = 0;
-
+const numJewelsInStones = (jewels, stones, count = 0) => {
   for (let i = 0; i < stones.length; i++) {
     if (jewels.indexOf(stones[i]) >= 0) count++;
   }
