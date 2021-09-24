@@ -1,0 +1,72 @@
+# 알고리즘 문제 풀이 - 3Sum Closest(LeetCode)
+
+## 문제 설명
+
+A **sentence** is a list of words that are separated by a single space with no leading or trailing spaces. Each of the words consists of **only** uppercase and lowercase English letters (no punctuation).
+
+- For example, `"Hello World"`, `"HELLO"`, and `"hello world hello world"` are all sentences.
+
+You are given a sentence `s`​​​​​​ and an integer `k​​​​​​`. You want to **truncate** `s`​​​​​​ such that it contains only the **first** `k​​​​​​` words. Return `s`​​​​​​ after **truncating** it.
+
+<br />
+
+## Example 1
+
+    Input: s = "Hello how are you Contestant", k = 4
+    Output: "Hello how are you"
+    Explanation:
+    The words in s are ["Hello", "how" "are", "you", "Contestant"].
+    The first 4 words are ["Hello", "how", "are", "you"].
+    Hence, you should return "Hello how are you".
+
+<br />
+
+## Example 2
+
+    Input: s = "What is the solution to this problem", k = 4
+    Output: "What is the solution"
+    Explanation:
+    The words in s are ["What", "is" "the", "solution", "to", "this", "problem"].
+    The first 4 words are ["What", "is", "the", "solution"].
+    Hence, you should return "What is the solution".
+
+<br />
+
+## Example 3
+
+    Input: s = "chopper is not a tanuki", k = 5
+    Output: "chopper is not a tanuki"
+
+<br />
+
+## Constraints
+
+- 1 <= s.length <= 500
+- k is in the range [1, the number of words in s].
+- s consist of only lowercase and uppercase English letters and spaces.
+- The words in s are separated by a single space.
+- There are no leading or trailing spaces.
+
+<br />
+
+## 접근법
+
+1. nums의 길이가 3 이하일 경우 바로 return 한다.
+2. 반복문을 돌면서 세 정수의 합을 확인한다.
+3. 세 정수의 합이 같으면 바로 return 한다.
+4. sum과 target 숫자의 차가 closestSum과 target의 숫자의 차보다 작으면 sum을 closestSum에 할당한다.
+
+<br />
+
+## 코드 작성
+
+```js
+/**
+ * @param {string} s
+ * @param {number} k
+ * @return {string}
+ */
+const truncateSentence = (s, k) => s.split(" ", k).join(" ");
+```
+
+<br />
