@@ -1,4 +1,4 @@
-# 알고리즘 문제 풀이 - 3Sum Closest(LeetCode)
+# 알고리즘 문제 풀이 - Truncate Sentence(LeetCode)
 
 ## 문제 설명
 
